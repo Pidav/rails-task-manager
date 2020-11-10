@@ -10,11 +10,11 @@
           <input type="checkbox" name="checkbox" class="mx-2" >
         <% end %>
         <%= link_to task.title, task_path(task) %>
+        <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
       </li>
     <% end %>
   </ul>
   <hr>
-  <div class="new-button">
-    <%= link_to "Add a new task", new_task_path %>
-  </div>
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  <%= link_to "Add a new task", new_task_path %>
 </div>
