@@ -5,9 +5,9 @@
     <% @tasks.each do |task| %>
       <li class="list-group-item">
         <% if task.completed %>
-          <input type="checkbox" name="checkbox" class="mx-2" checked>
+          <i class="fa fa-check-square-o mx-2" aria-hidden="true"></i>
         <% else %>
-          <input type="checkbox" name="checkbox" class="mx-2" >
+          <i class="fa fa-square-o mx-2" aria-hidden="true"></i>
         <% end %>
         <%= link_to task.title, task_path(task) %>
         <%= link_to '<i class="fa fa-trash" aria-hidden="true"></i>'.html_safe, task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>

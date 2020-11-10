@@ -8,10 +8,10 @@
   <p class="details bg-light p-3 rounded border"><%= @task.details %></p>
   <div class="status-box d-flex align-items-center">
     <% if @task.completed %>
-      <input type="checkbox" name="checkbox" class="mx-2" checked>
+      <i class="fa fa-check-square-o mx-2" aria-hidden="true"></i>
       <span>The task is completed !</span>
     <% else %>
-      <input type="checkbox" name="checkbox" class="mx-2">
+      <i class="fa fa-square-o mx-2" aria-hidden="true"></i>
       <span>The task is not completed yet</span>
     <% end %>
   </div>
