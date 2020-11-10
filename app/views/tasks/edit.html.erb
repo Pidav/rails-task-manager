@@ -1,25 +1,6 @@
 <div class="container">
   <h1>Update task</h1>
-  <div>
-    <%= form_for(@task) do |f| %>
-      <div class="form-group">
-        <%= f.label :title %>
-        <br>
-        <%= f.text_field :title %>
-      </div>
-      <div class="form-group">
-        <h5><%= f.label :details %></h5>
-        <%= f.text_field :details %>
-      </div>
-      <div class="form-group d-flex align-items-center">
-        <%= f.check_box :completed %>
-        <%= f.label :completed %>
-      </div>
-      <div class="btn btn-primary">
-        <%= f.submit value="Update"%>
-      </div>
-    <% end %>
-  </div>
+  <%= render "form", task: @task %>
   <hr>
   <i class="fa fa-undo" aria-hidden="true"></i>
   <%= link_to "Back to list", tasks_path %>
